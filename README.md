@@ -34,6 +34,12 @@ You shoudl have the following packages installed on the Linux System.
 
   * We have also exposed all the default ports of the container on which the services are provided for the application in the docker-compose definiton.
   
+* **Persisting the data** :
+  * In order to retain the data which is feeded in the databases , we have done volume mounting, which is defined in the docker-compose files as shown in the below images.
+  * Volume Mounts are helpful to retain the data , even though the containers undergo restarts and your data remains safe and secure.
+  * For mongo and mysql , we have the following code to get that done .
+  
+  ![Alt text](./images/volumeMount.JPG?raw=true "Title")
 * **Nginx Configuration** : 
   * Since the deployment had to be driven using nginx, there for we are installing the nginx package on the node docker container using the following command writen in the entrypoint.sh file :
     
